@@ -1,21 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="utils.bobo.com.boboutils" >
+    package="utils.bobo.com.boboutils">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name=".DemosActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".file.FileEncryptorActivity"
+            android:label="@string/title_activity_file_encryptor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+            <meta-data android:name="path" android:value="File/FileEncryptor"/>
+        </activity>
+
+        <activity
+            android:name=".jobscheduler.JobSchedulerAndThreadAndAsyncTask"
+            android:label="@string/title_activity_jobscheduler_thread_asynctask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+            <meta-data android:name="path" android:value="Jobscheduler/JobSchedulerAndThreadAndAsyncTask"/>
+        </activity>
+        <service
+            android:name=".jobscheduler.TestJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+
     </application>
 
 </manifest>
