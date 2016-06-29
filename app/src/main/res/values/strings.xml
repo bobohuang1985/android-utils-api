@@ -5,4 +5,12 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_file_encryptor">FileEncryptorActivity</string>
     <string name="title_activity_jobscheduler_thread_asynctask">JobSchedulerAndThreadAndAsyncTask</string>
+    <string name="up_directory">上一级目录</string>
+    <string name="ext_storage">外部存储器</string>
+    <string name="int_storage">内部存储器</string>
+    <string name="file_option">内部存储器</string>
+    <string name="aes_encrypt">AES加密</string>
+    <string name="aes_decrypt">AES解密</string>
+    <string name="fast_encrypt">快速加密</string>
+    <string name="fast_decrypt">快速解密</string>
 </resources>

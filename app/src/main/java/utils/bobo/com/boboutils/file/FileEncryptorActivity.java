@@ -1,31 +1,31 @@
 package utils.bobo.com.boboutils.file;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityCompat.OnRequestPermissionsResultCallback;
+import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 
 import utils.bobo.com.boboutils.R;
 
-public class FileEncryptorActivity extends AppCompatActivity {
-
+public class FileEncryptorActivity extends FragmentActivity implements OnRequestPermissionsResultCallback {
+    private static final int REQUESTCODE_PERMISSION_STORAGE = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_file_encryptor);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        setContentView(R.layout.fragment_activity);
+        initContent();
     }
-
+    private void initContent() {
+        Fragment fragment = CommonFileListFragment.newInstance();
+        FragmentTransaction ft = this.getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.content, fragment);
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        //ft.add(R.id.content, mStatusListFragment);
+        ft.commit();
+    }
 }

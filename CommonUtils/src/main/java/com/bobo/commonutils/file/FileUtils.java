@@ -51,6 +51,19 @@ public class FileUtils {
         return (separatorIndex < 0) ? path : path.substring(separatorIndex + 1, path.length());
 	}
 	/**
+	 * 获取文件名
+	 * get file name
+	 * @param path
+	 * @return
+	 */
+	public static String getFileNameWithoutSuffix(String pathOrName){
+		String name = getFileName(pathOrName);
+		int lastDot = name.lastIndexOf(".");
+		if ((lastDot < 0) || ((lastDot+1)>=name.length()))
+			return name;
+		return name.substring(0,lastDot);
+	}
+	/**
 	 * 获取文件后缀
 	 * git file's suffix
 	 * @param pathOrName
