@@ -38,6 +38,16 @@
             </intent-filter>
             <meta-data android:name="path" android:value="Jobscheduler/JobSchedulerAndThreadAndAsyncTask"/>
         </activity>
+        <activity
+            android:name=".deviceinfo.DeviceInfosActivity"
+            android:label="@string/title_activity_device_infos">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+            <meta-data android:name="path" android:value="DeviceInfos/CommonInfo"/>
+        </activity>
+
         <service
             android:name=".jobscheduler.TestJobService"
             android:permission="android.permission.BIND_JOB_SERVICE"

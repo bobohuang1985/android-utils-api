@@ -1,0 +1,24 @@
+<resources>
+    <string name="title_activity_file_encryptor">文件加密demo</string>
+    <string name="title_activity_jobscheduler_thread_asynctask">JobScheduler、Thread、AsyncTask</string>
+    <string name="up_directory">上一级目录</string>
+    <string name="ext_storage">外部存储器</string>
+    <string name="int_storage">内部存储器</string>
+    <string name="file_option">内部存储器</string>
+    <string name="aes_encrypt">AES加密</string>
+    <string name="aes_decrypt">AES解密</string>
+    <string name="fast_encrypt">快速加密</string>
+    <string name="fast_decrypt">快速解密</string>
+
+    <string name="title_activity_device_infos">设备通用信息</string>
+    <string name="system_info_kernel">内核</string>
+    <string name="system_info_ids">手机标示</string>
+    <string name="system_info_dual_sims">手机串号</string>
+    <string name="system_info_os">OS</string>
+    <string name="system_info_screen">屏幕信息</string>
+    <string name="system_info_mtd">MTD分区信息</string>
+    <string name="system_info_mount">分区挂载</string>
+    <string name="system_info_ram">RAM内存信息</string>
+    <string name="system_info_rom">ROM存储信息</string>
+    <string name="system_info_sdcard">SD卡</string>
+</resources>
