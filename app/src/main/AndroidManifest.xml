@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="utils.bobo.com.boboutils">
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,9 +27,11 @@
 
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
-            <meta-data android:name="path" android:value="File/FileEncryptor"/>
-        </activity>
 
+            <meta-data
+                android:name="path"
+                android:value="File/FileEncryptor" />
+        </activity>
         <activity
             android:name=".jobscheduler.JobSchedulerAndThreadAndAsyncTask"
             android:label="@string/title_activity_jobscheduler_thread_asynctask">
@@ -36,23 +40,65 @@
 
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
-            <meta-data android:name="path" android:value="Jobscheduler/JobSchedulerAndThreadAndAsyncTask"/>
+
+            <meta-data
+                android:name="path"
+                android:value="Jobscheduler/JobSchedulerAndThreadAndAsyncTask" />
         </activity>
         <activity
             android:name=".deviceinfo.DeviceInfosActivity"
             android:label="@string/title_activity_device_infos">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
-            <meta-data android:name="path" android:value="DeviceInfos/CommonInfo"/>
+
+            <meta-data
+                android:name="path"
+                android:value="DeviceInfos/CommonInfo" />
+        </activity>
+        <activity
+            android:name=".deviceinfo.CupInfosActivity"
+            android:label="@string/title_activity_cpu_infos">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="DeviceInfos/Cpu Info" />
         </activity>
 
         <service
             android:name=".jobscheduler.TestJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:exported="true"/>
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
+        <activity android:name=".App.AppWidgetApiActivity"
+            android:label="ApiTest">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/AppWidget/ApiTest" />
+        </activity>
+        <activity android:name=".App.WakeLockGetAndReleaseActivity"
+            android:label="GetAndRelease">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/WakeLock/GetAndRelease" />
+        </activity>
     </application>
 
 </manifest>

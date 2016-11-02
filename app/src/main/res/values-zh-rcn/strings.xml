@@ -21,4 +21,7 @@
     <string name="system_info_ram">RAM内存信息</string>
     <string name="system_info_rom">ROM存储信息</string>
     <string name="system_info_sdcard">SD卡</string>
+    <string name="title_activity_cpu_infos">CPU信息</string>
+    <string name="offline">离线</string>
+
 </resources>

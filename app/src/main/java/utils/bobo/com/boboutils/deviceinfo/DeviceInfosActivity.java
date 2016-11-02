@@ -26,7 +26,7 @@ import java.util.Map;
 import utils.bobo.com.boboutils.R;
 
 /**
- * Created by huangzb1 on 2016/6/24.
+ * Created by bobohuang(bobohuang1985@qq.com)  on 2016/6/24.
  */
 public class DeviceInfosActivity extends ListActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
     private static final int REQUESTCODE_PERMISSION= 0;

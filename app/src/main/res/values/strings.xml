@@ -14,7 +14,7 @@
     <string name="fast_encrypt">快速加密</string>
     <string name="fast_decrypt">快速解密</string>
 
-    <string name="title_activity_device_infos">DeviceInfos</string>
+    <string name="title_activity_device_infos">Device Info</string>
     <string name="system_info_kernel">Kernel</string>
     <string name="system_info_ids">Series Number</string>
     <string name="system_info_dual_sims">IMEI and IMSI</string>
@@ -25,4 +25,7 @@
     <string name="system_info_ram">RAM Memory</string>
     <string name="system_info_rom">ROM Memory</string>
     <string name="system_info_sdcard">SDcard</string>
+
+    <string name="title_activity_cpu_infos">CPU Info</string>
+    <string name="offline">offline</string>
 </resources>
