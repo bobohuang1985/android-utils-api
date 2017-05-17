@@ -137,6 +137,19 @@
             android:name=".App.ForegroundService"
             android:enabled="true"
             android:exported="false"></service>
+        <activity
+            android:name=".App.NotificationActivity"
+            android:label="NotificationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/Notification/NotificationActivity" />
+        </activity>
     </application>
 
 </manifest>
