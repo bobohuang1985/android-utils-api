@@ -28,4 +28,26 @@
 
     <string name="title_activity_cpu_infos">CPU Info</string>
     <string name="offline">offline</string>
+
+    <string name="set_up_profile">开始设置</string>
+    <string name="enable_forwarding">Enable forwarding of Share Intent</string>
+    <string name="send_intent_text">Send a sample share Intent</string>
+    <string name="disable_forwarding">Disable forwarding</string>
+    <string name="setup_profile_message">点击开始设置应用双开</string>
+    <string name="main_message">The app is ready to control the managed profile.</string>
+    <string name="remove_profile">Remove managed profile</string>
+    <string name="multi_app_all_done">应用双开设置成功</string>
+    <string name="multi_app_all_done_explanation">您可以通过启动本应用的双开程序来管理双开应用，本应用的双开程序图标如下：</string>
+    <string name="toggle_calculator">MotoGuard in this profile: </string>
+    <string name="toggle_chrome">Chrome in this profile:</string>
+    <string name="set_chrome_restrictions">Set Chrome restrictions</string>
+    <string name="clear_chrome_restrictions">Clear Chrome restrictions</string>
+    <string name="icon">Icon</string>
+    <string name="profile_name">Sample Managed Profile</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="restrictions_set">Restrictions set.</string>
+    <string name="activity_not_found">No app can handle this intent.</string>
+    <string name="cleared">Cleared.</string>
+    <string name="multi_app">应用双开</string>
 </resources>

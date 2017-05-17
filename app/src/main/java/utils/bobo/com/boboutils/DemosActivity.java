@@ -1,6 +1,8 @@
 package utils.bobo.com.boboutils;
 
 import android.app.ListActivity;
+import android.app.admin.DevicePolicyManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -17,6 +19,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import utils.bobo.com.boboutils.MultiApp.*;
+
 /**
  * Created by huangzb1 on 2016/6/24.
  */
@@ -27,6 +31,14 @@ public class DemosActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        DevicePolicyManager manager = (DevicePolicyManager)
+                getSystemService(Context.DEVICE_POLICY_SERVICE);
+        if (manager.isProfileOwnerApp(getApplicationContext().getPackageName())) {
+            Intent intent = new Intent(this, utils.bobo.com.boboutils.MultiApp.MainActivity.class);
+            this.startActivity(intent);
+            finish();
+            return;
+        }
         Intent intent = getIntent();
         String path = intent.getStringExtra(KEY_EXTRA_PATH);
 

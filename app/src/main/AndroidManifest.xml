@@ -124,7 +124,6 @@
             android:label="ForgegroundServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
 
@@ -142,7 +141,6 @@
             android:label="NotificationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
 
@@ -150,6 +148,34 @@
                 android:name="path"
                 android:value="App/Notification/NotificationActivity" />
         </activity>
+        <activity
+            android:name=".MultiApp.MainActivity"
+            android:label="@string/multi_app">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+            <meta-data
+                android:name="path"
+                android:value="MultiApp/MultiAppDemo" />
+        </activity>
+
+        <activity
+            android:name=".MultiApp.EnableProfileActivity"
+            android:label="@string/multi_app"/>
+
+        <receiver
+            android:name=".MultiApp.BasicDeviceAdminReceiver"
+            android:description="@string/app_name"
+            android:label="@string/multi_app"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/basic_device_admin_receiver"/>
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
