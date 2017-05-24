@@ -12,7 +12,8 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:directBootAware="true">
         <activity
             android:name=".DemosActivity"
             android:label="@string/app_name">
@@ -124,6 +125,7 @@
             android:label="ForgegroundServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
 
@@ -131,16 +133,19 @@
                 android:name="path"
                 android:value="App/Service/ForgegroundService" />
         </activity>
+
         <service android:name=".App.LocationService" />
         <service
             android:name=".App.ForegroundService"
             android:enabled="true"
-            android:exported="false"></service>
+            android:exported="false" />
+
         <activity
             android:name=".App.NotificationActivity"
             android:label="NotificationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
 
@@ -153,16 +158,17 @@
             android:label="@string/multi_app">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
+
             <meta-data
                 android:name="path"
                 android:value="MultiApp/MultiAppDemo" />
         </activity>
-
         <activity
             android:name=".MultiApp.EnableProfileActivity"
-            android:label="@string/multi_app"/>
+            android:label="@string/multi_app" />
 
         <receiver
             android:name=".MultiApp.BasicDeviceAdminReceiver"
@@ -171,11 +177,23 @@
             android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
                 android:name="android.app.device_admin"
-                android:resource="@xml/basic_device_admin_receiver"/>
+                android:resource="@xml/basic_device_admin_receiver" />
+
             <intent-filter>
-                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".App.ScreenPinningActivity"
+            android:label="@string/screen_pinning">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+            <meta-data
+                android:name="path"
+                android:value="App/ScreenPinning/ScreenPinning" />
+        </activity>
     </application>
 
 </manifest>

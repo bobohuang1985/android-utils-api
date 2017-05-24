@@ -23,5 +23,5 @@
     <string name="system_info_sdcard">SD卡</string>
     <string name="title_activity_cpu_infos">CPU信息</string>
     <string name="offline">离线</string>
-
+    <string name="screen_pinning">屏幕固定</string>
 </resources>
