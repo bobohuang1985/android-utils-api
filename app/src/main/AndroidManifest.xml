@@ -197,7 +197,8 @@
                 android:name="path"
                 android:value="App/ScreenPinning/ScreenPinning" />
         </activity>
-        <activity android:name=".App.ShowWhenLockActivity"
+        <activity
+            android:name=".App.ShowWhenLockActivity"
             android:label="@string/show_when_lock">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -208,6 +209,18 @@
             <meta-data
                 android:name="path"
                 android:value="App/SpecialActivitys/ShowWhenLockActivity" />
+        </activity>
+        <activity android:name=".SimpleWebServerProxy"
+            android:label="SimpleWebServer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="Web/SimpleWebServer" />
         </activity>
     </application>
 

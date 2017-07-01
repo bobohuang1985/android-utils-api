@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="webserv_app_name">WebServ</string>
+    <!-- Buttons -->
+    <string name="btn_start">Start</string>
+    <string name="btn_stop">Stop</string>
+    <!-- Menus -->
+    <string name="menu_scan_barcode">Scan Barcode</string>
+    <string name="menu_preferences">Preferences</string>
+    <!-- Infos -->
+    <string name="info_crash">Exception occurred!\nLog to `%1$s`.</string>
+    <string name="info_net_off">Network unavailable</string>
+    <string name="info_port_incorrect">Port should be in 1024&#8211;65535.</string>
+    <!-- Notifications -->
+    <string name="noti_serv_running">WebServ is running.</string>
+    <!-- Dialogs -->
+    <string name="tit_serv_useless">Server unavailable</string>
+    <string name="msg_serv_useless">Network unavailable or storage unmounted.</string>
+    <string name="tit_port_in_use">Port in use</string>
+    <string name="msg_port_in_use">Please change to another port.</string>
+    <string name="tit_temp_not_found">One server file not found</string>
+    <string name="msg_temp_not_found">Please reset server files.</string>
+    <string name="tit_scan_result">Copy result to clipboard</string>
+
+    <skip />
+
+    <!-- Preferences -->
+    <string name="set_serv_t">Basic server</string>
+    <string name="set_serv_port_t">Server port</string>
+    <string name="set_serv_port_s">Range: 1024&#8211;65535, restart to take effect.</string>
+    <string name="set_serv_port_dlg_t">Please enter the port</string>
+    <string name="set_serv_root_t">Share root directory</string>
+    <string name="set_serv_root_s">Allow the root of a share, restart to take effect.</string>
+    <string name="set_serv_root_dlg_t">Please choose the root directory</string>
+    <string name="set_serv_reset_t">Reset server file</string>
+    <string name="set_serv_reset_s">Reset server file, and clean the cache.</string>
+    <string name="set_allow_t">Allow permissions</string>
+    <string name="set_allow_download_t">Allow download</string>
+    <string name="set_allow_download_s">Allow download the file or directory.</string>
+    <string name="set_allow_delete_t">Allow delete</string>
+    <string name="set_allow_delete_s">Allow delete the file or directory.</string>
+    <string name="set_allow_upload_t">Allow upload</string>
+    <string name="set_allow_upload_s">Allow upload a file to the directory.</string>
+    <string name="set_more_t">Advanced settings</string>
+    <string name="set_more_gzip_t">Use GZIP</string>
+    <string name="set_more_gzip_s">Compress webpages for improving the transmission efficiency.</string>
+    <string name="set_more_cache_t">Use file cache</string>
+    <string name="set_more_cache_s">Cache some webpages. If using GZIP, will also cache compressed content.</string>
+    <string name="set_more_clean_t">Clean file cache</string>
+    <string name="set_more_clean_s">Clean all server file cache.</string>
+    <string name="set_about_t">About</string>
+    <string name="set_about_more_t">App Source</string>
+    <string name="set_about_more_s">https://github.com/joinAero/AndroidWebServ/</string>
+
+    <skip />
+
+    <!-- ZXing -->
+    <string name="btn_ok">OK</string>
+    <string name="msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
+    <string name="msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
+    <string name="contents_contact">Contact info</string>
+    <string name="contents_email">Email address</string>
+    <string name="contents_location">Geographic coordinates</string>
+    <string name="contents_phone">Phone number</string>
+    <string name="contents_sms">SMS address</string>
+    <string name="contents_text">Plain text</string>
+
+    <skip />
+
+    <!-- Views -->
+    <string name="v_path">Path</string>
+    <string name="v_name">Name</string>
+    <string name="v_size">Size</string>
+    <string name="v_modi">Modified Date</string>
+    <string name="v_oper">Operations</string>
+    <string name="v_parent">Parent</string>
+    <string name="v_download">Download</string>
+    <string name="v_delete">Delete</string>
+    <string name="v_upload">Upload</string>
+    <string name="v_wel_to">Welcome to</string>
+    <string name="v_yes">Yes</string>
+    <string name="v_no">NO</string>
+    <string name="v_tip">Tip</string>
+    <string name="v_del_msg">Confirm deletions?</string>
+    <string name="v_del_fail">Deletion fails.</string>
+    <string name="v_up_fail">Upload fails.</string>
+    <string name="v_not_allow">No longer allowed func.</string>
+
+</resources>

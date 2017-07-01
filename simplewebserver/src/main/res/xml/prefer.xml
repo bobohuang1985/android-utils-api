@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/set_serv_t" >
+        <Preference
+            android:defaultValue="7766"
+            android:key="serv_port"
+            android:summary="@string/set_serv_port_s"
+            android:title="@string/set_serv_port_t"
+            android:widgetLayout="@layout/prefer_widget_edit" />
+        <Preference
+            android:defaultValue="/"
+            android:key="serv_root"
+            android:summary="@string/set_serv_root_s"
+            android:title="@string/set_serv_root_t"
+            android:widgetLayout="@layout/prefer_widget_edit" />
+        <org.join.ws.ui.widget.ProgressBarPreference
+            android:key="serv_reset"
+            android:summary="@string/set_serv_reset_s"
+            android:title="@string/set_serv_reset_t"
+            android:widgetLayout="@layout/prefer_widget_wait" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/set_allow_t" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="allow_download"
+            android:summary="@string/set_allow_download_s"
+            android:title="@string/set_allow_download_t"
+            android:widgetLayout="@layout/prefer_widget_checkbox" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="allow_delete"
+            android:summary="@string/set_allow_delete_s"
+            android:title="@string/set_allow_delete_t"
+            android:widgetLayout="@layout/prefer_widget_checkbox" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="allow_upload"
+            android:summary="@string/set_allow_upload_s"
+            android:title="@string/set_allow_upload_t"
+            android:widgetLayout="@layout/prefer_widget_checkbox" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/set_more_t" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="more_gzip"
+            android:summary="@string/set_more_gzip_s"
+            android:title="@string/set_more_gzip_t"
+            android:widgetLayout="@layout/prefer_widget_checkbox" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="more_cache"
+            android:summary="@string/set_more_cache_s"
+            android:title="@string/set_more_cache_t"
+            android:widgetLayout="@layout/prefer_widget_checkbox" />
+
+        <org.join.ws.ui.widget.ProgressBarPreference
+            android:key="more_clean"
+            android:summary="@string/set_more_clean_s"
+            android:title="@string/set_more_clean_t"
+            android:widgetLayout="@layout/prefer_widget_wait" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/set_about_t" >
+        <Preference
+            android:key="about_more"
+            android:summary="@string/set_about_more_s"
+            android:title="@string/set_about_more_t" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

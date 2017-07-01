@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imageview"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_gravity="center_vertical"
+    android:layout_marginRight="2dp"
+    android:scaleType="fitCenter"
+    android:src="@android:drawable/ic_menu_edit" />

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.join.ws.ui.widget.FileBrowser xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:join="http://github.com/joinAero/AndroidWebServ/"
+    android:id="@+id/filebrowser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:cacheColorHint="@android:color/transparent"
+    join:back_resp="true"
+    join:file_def="@drawable/file_def"
+    join:folder_def="@drawable/folder_def"
+    join:folder_parent="@drawable/folder_parent" />

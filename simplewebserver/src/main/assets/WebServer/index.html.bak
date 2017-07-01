@@ -1,0 +1,25 @@
+<html xmlns=>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+<!--
+.3 {
+	font-size: 16px;
+	font-family: "宋体";
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="33%" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+    <td><strong class="3"><a href="/hello.html" target="_blank">点击下载apk</a></strong></td>
+  </tr>
+  <tr>
+    <td><strong class="3"><a href="/attachments/demo.apk" target="_blank">点击下载apk</a></strong></td>
+  </tr>
+</table>
+</body>
+</html>

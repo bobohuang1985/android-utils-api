@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Buttons -->
+    <string name="btn_start">开始</string>
+    <string name="btn_stop">停止</string>
+    <!-- Menus -->
+    <string name="menu_scan_barcode">二维码扫描</string>
+    <string name="menu_preferences">偏好设定</string>
+    <!-- Infos -->
+    <string name="info_crash">未知异常！\n已记录到`%1$s`。</string>
+    <string name="info_net_off">网络不可用</string>
+    <string name="info_port_incorrect">端口应该在1024&#8211;65535。</string>
+    <!-- Notifications -->
+    <string name="noti_serv_running">WebServ运行中。</string>
+    <!-- Dialogs -->
+    <string name="tit_serv_useless">服务不可用</string>
+    <string name="msg_serv_useless">网络不可用或服务未挂载。</string>
+    <string name="tit_port_in_use">端口被占用了</string>
+    <string name="msg_port_in_use">请改为另一个端口。</string>
+    <string name="tit_temp_not_found">某服务文件未找到</string>
+    <string name="msg_temp_not_found">请重置服务文件。</string>
+    <string name="tit_scan_result">结果复制到剪贴板</string>
+
+    <skip />
+
+    <!-- Preferences -->
+    <string name="set_serv_t">基础服务</string>
+    <string name="set_serv_port_t">服务端口</string>
+    <string name="set_serv_port_s">范围：1024&#8211;65535，重启生效。</string>
+    <string name="set_serv_port_dlg_t">请输入端口号</string>
+    <string name="set_serv_root_t">共享根目录</string>
+    <string name="set_serv_root_s">允许共享的根目录位置，重启生效。</string>
+    <string name="set_serv_root_dlg_t">请选择共享根目录</string>
+    <string name="set_serv_reset_t">重置服务文件</string>
+    <string name="set_serv_reset_s">重置服务使用的资源文件，并清理缓存。</string>
+    <string name="set_allow_t">允许功能</string>
+    <string name="set_allow_download_t">允许下载</string>
+    <string name="set_allow_download_s">允许下载某文件或目录。</string>
+    <string name="set_allow_delete_t">允许删除</string>
+    <string name="set_allow_delete_s">允许删除某文件或目录。</string>
+    <string name="set_allow_upload_t">允许上传</string>
+    <string name="set_allow_upload_s">允许上传某文件到目录。</string>
+    <string name="set_more_t">更多设置</string>
+    <string name="set_more_gzip_t">使用GZIP压缩</string>
+    <string name="set_more_gzip_s">将网页等压缩后返回给浏览器，提高传输效率。</string>
+    <string name="set_more_cache_t">使用文件缓存</string>
+    <string name="set_more_cache_s">缓存某些网页。开启GZIP后，会缓存压缩后的内容。</string>
+    <string name="set_more_clean_t">清除文件缓存</string>
+    <string name="set_more_clean_s">清除服务文件缓存的所有内容。</string>
+    <string name="set_about_t">关于</string>
+    <string name="set_about_more_t">应用源码</string>
+    <string name="set_about_more_s">https://github.com/joinAero/AndroidWebServ/</string>
+
+    <skip />
+
+    <!-- ZXing -->
+    <string name="btn_ok">确定</string>
+    <string name="msg_default_status">请将条码置于取景框内扫描。  </string>
+    <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+
+    <string name="contents_contact">联系人信息</string>
+    <string name="contents_email">Email地址</string>
+    <string name="contents_location">地理坐标</string>
+    <string name="contents_phone">电话号码</string>
+    <string name="contents_sms">短信地址</string>
+    <string name="contents_text">纯文本</string>
+
+    <skip />
+
+    <!-- Views -->
+    <string name="v_path">的索引</string>
+    <string name="v_name">名称</string>
+    <string name="v_size">大小</string>
+    <string name="v_modi">修改日期</string>
+    <string name="v_oper">处理操作</string>
+    <string name="v_parent">上级目录</string>
+    <string name="v_download">下载</string>
+    <string name="v_delete">删除</string>
+    <string name="v_upload">上传</string>
+    <string name="v_wel_to">欢迎来到</string>
+    <string name="v_yes">确定</string>
+    <string name="v_no">取消</string>
+    <string name="v_tip">提示</string>
+    <string name="v_del_msg">确定删除？</string>
+    <string name="v_del_fail">删除失败</string>
+    <string name="v_up_fail">上传失败</string>
+    <string name="v_not_allow">功能不再被允许。</string>
+
+</resources>

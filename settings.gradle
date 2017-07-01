@@ -1,1 +1,1 @@
-include ':app', ':CommonUtils'
+include ':app', ':CommonUtils', ':simplewebserver'

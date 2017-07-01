@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/btn_toggle_off_normal" android:state_checked="false" android:state_pressed="false"></item>
+    <item android:drawable="@drawable/btn_toggle_off_pressed" android:state_checked="false" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/btn_toggle_on_normal" android:state_checked="true" android:state_pressed="false"></item>
+    <item android:drawable="@drawable/btn_toggle_on_pressed" android:state_checked="true" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/btn_toggle_off_normal"></item>
+
+</selector>

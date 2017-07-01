@@ -1,0 +1,16 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Black.NoTitleBar"></style>
+
+    <style name="BtnToggleCool">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:background">@drawable/btn_toggle</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>
