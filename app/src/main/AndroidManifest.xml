@@ -10,10 +10,10 @@
 
     <application
         android:allowBackup="true"
+        android:directBootAware="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:directBootAware="true">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".DemosActivity"
             android:label="@string/app_name">
@@ -184,15 +184,30 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".App.ScreenPinningActivity"
+        <activity
+            android:name=".App.ScreenPinningActivity"
             android:label="@string/screen_pinning">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
+
             <meta-data
                 android:name="path"
                 android:value="App/ScreenPinning/ScreenPinning" />
+        </activity>
+        <activity android:name=".App.ShowWhenLockActivity"
+            android:label="@string/show_when_lock">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/SpecialActivitys/ShowWhenLockActivity" />
         </activity>
     </application>
 

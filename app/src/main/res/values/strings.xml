@@ -50,5 +50,6 @@
     <string name="activity_not_found">No app can handle this intent.</string>
     <string name="cleared">Cleared.</string>
     <string name="screen_pinning">Screen pinning</string>
+    <string name="show_when_lock">Show when lock</string>
     <string name="multi_app">应用双开</string>
 </resources>
