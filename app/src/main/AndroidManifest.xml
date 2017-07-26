@@ -210,7 +210,8 @@
                 android:name="path"
                 android:value="App/SpecialActivitys/ShowWhenLockActivity" />
         </activity>
-        <activity android:name=".SimpleWebServerProxy"
+        <activity
+            android:name=".SimpleWebServerProxy"
             android:label="SimpleWebServer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -222,6 +223,28 @@
                 android:name="path"
                 android:value="Web/SimpleWebServer" />
         </activity>
+        <activity
+            android:name=".App.DynamicViewPageActivity"
+            android:label="DynamicViewPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/ViewPage/DynamicViewPageActivity" />
+        </activity>
+        <receiver
+            android:name=".App.SecretCodeReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE" />
+                <data android:scheme="android_secret_code" android:host="5858"  />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
