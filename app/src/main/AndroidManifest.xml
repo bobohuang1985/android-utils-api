@@ -236,15 +236,41 @@
                 android:name="path"
                 android:value="App/ViewPage/DynamicViewPageActivity" />
         </activity>
+
         <receiver
             android:name=".App.SecretCodeReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE" />
-                <data android:scheme="android_secret_code" android:host="5858"  />
+
+                <data
+                    android:host="5858"
+                    android:scheme="android_secret_code" />
             </intent-filter>
         </receiver>
+        <receiver android:name=".App.appwidget.CustomViewAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/custom_view_app_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".App.appwidget.UpdateAppWidgetService"
+            android:exported="false"></service>
+        <provider
+            android:name="utils.bobo.com.boboutils.App.appwidget.CustomViewFileProvider"
+            android:authorities="utils.bobo.com.boboutils.CustomViewFileProvider"
+            android:grantUriPermissions="true"
+            android:exported="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
     </application>
 
 </manifest>

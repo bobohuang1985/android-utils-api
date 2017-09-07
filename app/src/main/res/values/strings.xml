@@ -52,4 +52,6 @@
     <string name="screen_pinning">Screen pinning</string>
     <string name="show_when_lock">Show when lock</string>
     <string name="multi_app">应用双开</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 </resources>
