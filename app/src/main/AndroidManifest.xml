@@ -7,7 +7,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
     <application
         android:allowBackup="true"
         android:directBootAware="true"
@@ -110,6 +111,20 @@
         <activity
             android:name=".App.LocationActivity"
             android:label="LocationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/Location/LocationDemo" />
+        </activity>
+        <activity
+            android:name=".App.RequestOneLocationActivity"
+            android:screenOrientation="nosensor"
+            android:label="RequestOneLocationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

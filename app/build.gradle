@@ -25,4 +25,22 @@ dependencies {
     compile 'com.android.support:design:23.4.0'
     compile project(':CommonUtils')
     compile project(':simplewebserver')
+    provided files('dynamic_libs/framework.jar')
+}
+tasks.withType(JavaCompile) {
+    doFirst {
+        println "===========================================================";
+        println options.bootClasspath;
+
+        def provided = [];
+        fileTree(dir: 'dynamic_libs', include: ['*.jar']).each {
+            provided.add(it.getAbsolutePath());
+        }
+        options.bootClasspath.split(File.pathSeparator).each {
+            provided.add(it);
+        }
+        options.bootClasspath = provided.join(File.pathSeparator)
+
+        println options.bootClasspath;
+    }
 }
