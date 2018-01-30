@@ -252,7 +252,18 @@
                 android:name="path"
                 android:value="App/ViewPage/DynamicViewPageActivity" />
         </activity>
+        <activity
+            android:name=".App.zombieservice.ZombieServiceStartActivity"
+            android:label="ZombieService">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
 
+            <meta-data
+                android:name="path"
+                android:value="App/ZombieService/ZombieServiceStartActivity" />
+        </activity>
         <receiver
             android:name=".App.SecretCodeReceiver"
             android:enabled="true"
@@ -289,7 +300,8 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
-        <activity android:name=".App.RecyclerView.GridLayoutManagerActivity"
+        <activity
+            android:name=".App.RecyclerView.GridLayoutManagerActivity"
             android:label="GridLayoutManagerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -301,6 +313,24 @@
                 android:name="path"
                 android:value="App/RecyclerView/GridLayoutManagerActivity" />
         </activity>
+
+        <service
+            android:name=".App.zombieservice.ZombieServiceFirst"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.boboutils.action.BIND_ZOMBIESERVICEFIRST" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".App.zombieservice.ZombieServiceSecond"
+            android:process=":ZombieServiceSecond"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.boboutils.action.BIND_ZOMBIESERVICESECOND" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
