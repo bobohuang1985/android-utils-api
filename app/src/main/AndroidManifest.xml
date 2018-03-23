@@ -15,6 +15,7 @@
         android:directBootAware="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".DemosActivity"
@@ -257,6 +258,7 @@
             android:label="ZombieService">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
 
@@ -264,6 +266,7 @@
                 android:name="path"
                 android:value="App/ZombieService/ZombieServiceStartActivity" />
         </activity>
+
         <receiver
             android:name=".App.SecretCodeReceiver"
             android:enabled="true"
@@ -324,13 +327,43 @@
         </service>
         <service
             android:name=".App.zombieservice.ZombieServiceSecond"
-            android:process=":ZombieServiceSecond"
             android:enabled="true"
-            android:exported="true">
+            android:exported="true"
+            android:process=":ZombieServiceSecond">
             <intent-filter>
                 <action android:name="com.boboutils.action.BIND_ZOMBIESERVICESECOND" />
             </intent-filter>
         </service>
+
+        <activity
+            android:name=".App.customanim.FloatingPelletsActivity"
+            android:label="FloatingPellets">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/CustomAnim/FloatingPelletsActivity" />
+        </activity>
+
+        <service
+            android:name=".App.TestService"
+            android:enabled="true"
+            android:exported="false"></service>
+        <activity
+            android:name=".App.TestServiceActivity"
+            android:label="TestServiceActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+            <meta-data
+                android:name="path"
+                android:value="App/Service/TestServiceActivity" />
+        </activity>
     </application>
 
 </manifest>
