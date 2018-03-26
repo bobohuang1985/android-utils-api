@@ -42,7 +42,7 @@ public class CommonUtil {
     private Context mContext;
 
     private CommonUtil() {
-        mContext = WSApplication.getInstance().getBaseContext();
+        mContext = WSApplication.getApp().getBaseContext();
     }
 
     /**

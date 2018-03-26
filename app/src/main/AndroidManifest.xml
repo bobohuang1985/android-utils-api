@@ -16,7 +16,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name="MyApp">
         <activity
             android:name=".DemosActivity"
             android:label="@string/app_name">
@@ -363,6 +364,17 @@
             <meta-data
                 android:name="path"
                 android:value="App/Service/TestServiceActivity" />
+        </activity>
+        <activity
+            android:name=".MultiApp.MultiAppByDroidPluginActivity"
+            android:label="MultiAppByDroidPluginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+            <meta-data
+                android:name="path"
+                android:value="MultiApp/MultiAppByDroidPluginActivity" />
         </activity>
     </application>
 

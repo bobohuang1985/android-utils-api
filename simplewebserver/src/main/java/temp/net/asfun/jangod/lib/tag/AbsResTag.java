@@ -1,5 +1,7 @@
 package net.asfun.jangod.lib.tag;
 
+import android.app.Application;
+
 import net.asfun.jangod.interpret.InterpretException;
 import net.asfun.jangod.interpret.JangodInterpreter;
 import net.asfun.jangod.lib.Tag;
@@ -15,7 +17,7 @@ import org.join.ws.WSApplication;
  */
 public abstract class AbsResTag implements Tag {
 
-    protected WSApplication app = WSApplication.getInstance();
+    protected Application app = WSApplication.getApp();
     protected String pkgName = app.getPackageName();
 
     @Override

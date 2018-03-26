@@ -80,7 +80,7 @@ public class PreferActivity extends PreferenceActivity {
      */
     public static void save(String key, Object value) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(WSApplication
-                .getInstance());
+                .getApp());
         Editor editor = sp.edit();
         if (value instanceof Integer) {
             editor.putInt(key, (Integer) value);
@@ -95,7 +95,7 @@ public class PreferActivity extends PreferenceActivity {
      */
     public static void restore(String... keys) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(WSApplication
-                .getInstance());
+                .getApp());
         for (String key : keys) {
             restore(sp, key);
         }
@@ -106,7 +106,7 @@ public class PreferActivity extends PreferenceActivity {
      */
     public static void restoreAll() {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(WSApplication
-                .getInstance());
+                .getApp());
         Config.PORT = sp.getInt(KEY_SERV_PORT, 7766);
         Config.WEBROOT = sp.getString(KEY_SERV_ROOT, "/");
         Config.ALLOW_DOWNLOAD = sp.getBoolean(KEY_ALLOW_DOWNLOAD, true);

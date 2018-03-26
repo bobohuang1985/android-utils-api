@@ -16,7 +16,6 @@
     <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
     <!-- TODO make this not required again after android.hardware.camera.any is available -->
     <application
-        android:name="org.join.ws.WSApplication"
         android:theme="@style/AppTheme">
         <activity
             android:name="org.join.ws.ui.WSActivity"

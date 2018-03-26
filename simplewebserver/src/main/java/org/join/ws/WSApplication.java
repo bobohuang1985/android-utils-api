@@ -20,18 +20,15 @@ import android.content.Intent;
  * @brief 应用全局
  * @author join
  */
-public class WSApplication extends Application {
-
+public class WSApplication{
     private static WSApplication self;
+    private static Application mApp;
 
     private Intent wsServIntent;
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        self = this;
-        wsServIntent = new Intent(this,WSService.class);
+    public void onCreate(Application app) {
+        mApp = app;
+        wsServIntent = new Intent(app,WSService.class);
 
         initAppDir();
         initJangod();
@@ -44,29 +41,34 @@ public class WSApplication extends Application {
         PreferActivity.restoreAll();
     }
 
-    public static WSApplication getInstance() {
+    public static synchronized WSApplication getInstance() {
+        if(self == null){
+            self = new WSApplication();
+        }
         return self;
     }
-
+    public static Application getApp() {
+        return mApp;
+    }
     /**
      * @brief 开启全局服务
      */
     public void startWsService() {
-        startService(wsServIntent);
+        mApp.startService(wsServIntent);
     }
 
     /**
      * @brief 停止全局服务
      */
     public void stopWsService() {
-        stopService(wsServIntent);
+        mApp.stopService(wsServIntent);
     }
 
     /**
      * @brief 初始化应用目录
      */
     public void initAppDir() {
-        CopyUtil mCopyUtil = new CopyUtil(getApplicationContext());
+        CopyUtil mCopyUtil = new CopyUtil(mApp.getApplicationContext());
         // mCopyUtil.deleteFile(new File(Config.SERV_ROOT_DIR)); // 清理服务文件目录
         try {
             // 重新复制到SDCard，仅当文件不存在时
