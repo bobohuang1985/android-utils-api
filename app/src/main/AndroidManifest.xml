@@ -9,15 +9,18 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:directBootAware="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name="MyApp">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".DemosActivity"
             android:label="@string/app_name">
@@ -353,14 +356,17 @@
         <service
             android:name=".App.TestService"
             android:enabled="true"
-            android:exported="false"></service>
+            android:exported="false" />
+
         <activity
             android:name=".App.TestServiceActivity"
             android:label="TestServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
+
             <meta-data
                 android:name="path"
                 android:value="App/Service/TestServiceActivity" />
@@ -370,12 +376,32 @@
             android:label="MultiAppByDroidPluginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
+
             <meta-data
                 android:name="path"
                 android:value="MultiApp/MultiAppByDroidPluginActivity" />
         </activity>
+        <activity
+            android:name=".App.call.CallAudioRecordActivity"
+            android:label="CallAudioRecordActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/Call/CallAudioRecordActivity" />
+        </activity>
+
+        <service
+            android:name=".App.call.AudioRecorderService"
+            android:enabled="true"
+            android:exported="false"></service>
     </application>
 
 </manifest>
