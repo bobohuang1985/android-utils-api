@@ -109,8 +109,9 @@ public class AESHelper {
         // Log.d(TAG, "加密前的seed=" + seed + ",内容为:" + clearText);
         byte[] result = null;
         try {
-            byte[] rawkey = getRawKey(seed.getBytes());
-            result = encrypt(rawkey, source.getBytes());
+            //byte[] rawkey = getRawKey(seed.getBytes());
+            SecretKeySpec secretKey = keygenerate(seed);
+            result = encrypt(secretKey, source.getBytes());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -127,11 +128,12 @@ public class AESHelper {
      * @return
      */
     public String decrypt(String seed, String encrypted) {
-        byte[] rawKey;
+        //byte[] rawKey;
         try {
-            rawKey = getRawKey(seed.getBytes());
+            //rawKey = getRawKey(seed.getBytes());
+            SecretKeySpec secretKey = keygenerate(seed);
             byte[] enc = toByte(encrypted);
-            byte[] result = decrypt(rawKey, enc);
+            byte[] result = decrypt(secretKey, enc);
             String coentn = new String(result);
             return coentn;
         } catch (Exception e) {
@@ -183,9 +185,9 @@ public class AESHelper {
      * @return
      * @throws Exception
      */
-    private byte[] encrypt(byte[] raw, byte[] input) throws Exception {
+    private byte[] encrypt(SecretKeySpec skeySpec, byte[] input) throws Exception {
         // 根据上一步生成的密匙指定一个密匙
-        SecretKeySpec skeySpec = new SecretKeySpec(raw, "AES");
+        //SecretKeySpec skeySpec = new SecretKeySpec(raw, "AES");
         // Cipher cipher = Cipher.getInstance("AES");
         // 加密算法，加密模式和填充方式三部分或指定加密算
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
@@ -204,8 +206,8 @@ public class AESHelper {
      * @return
      * @throws Exception
      */
-    private byte[] decrypt(byte[] raw, byte[] encrypted) throws Exception {
-        SecretKeySpec skeySpec = new SecretKeySpec(raw, "AES");
+    private byte[] decrypt(SecretKeySpec skeySpec, byte[] encrypted) throws Exception {
+        //SecretKeySpec skeySpec = new SecretKeySpec(raw, "AES");
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
         cipher.init(Cipher.DECRYPT_MODE, skeySpec, new IvParameterSpec(
                 new byte[cipher.getBlockSize()]));

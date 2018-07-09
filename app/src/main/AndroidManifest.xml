@@ -402,6 +402,19 @@
             android:name=".App.call.AudioRecorderService"
             android:enabled="true"
             android:exported="false"></service>
+        <activity
+            android:name=".App.ToastActivity"
+            android:label="ToastActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/Toast/ToastActivity" />
+        </activity>
     </application>
 
 </manifest>
