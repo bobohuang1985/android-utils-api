@@ -441,6 +441,19 @@
                 android:name="path"
                 android:value="App/CustomView/LongDrawableActivity" />
         </activity>
+        <activity
+            android:name=".App.reflect.ReflectDemoActivity"
+            android:label="ReflectDemoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/reflect/ReflectDemoActivity" />
+        </activity>
     </application>
 
 </manifest>
