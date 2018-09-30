@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
         android:name=".MyApp"
@@ -453,6 +454,19 @@
             <meta-data
                 android:name="path"
                 android:value="App/reflect/ReflectDemoActivity" />
+        </activity>
+        <activity
+            android:name=".App.SystemOverlayActivity"
+            android:label="SystemOverlayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/SystemOverlay/SystemOverlayActivity" />
         </activity>
     </application>
 
