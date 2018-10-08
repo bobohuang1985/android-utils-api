@@ -478,10 +478,20 @@
 
                 <category android:name="bobo.intent.category.DEMO_CODE" />
             </intent-filter>
+
             <meta-data
                 android:name="path"
                 android:value="App/Layout/CoordinatorLayoutDemoActivity" />
         </activity>
+
+        <service
+            android:name="com.bobo.service.utils.WakeupServerService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.bobo.service.utils.BIND_WAKEUP_SERVICE" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

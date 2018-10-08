@@ -3,6 +3,7 @@ package utils.bobo.com.boboutils;
 import android.app.Application;
 import android.content.Context;
 
+import com.bobo.service.utils.BindWakeupServerServiceHelp;
 import com.morgoo.droidplugin.PluginHelper;
 
 import org.join.ws.WSApplication;
@@ -19,7 +20,7 @@ public class MyApp extends Application {
         WSApplication.getInstance().onCreate(this);
 
         PluginHelper.getInstance().applicationOnCreate(getBaseContext());
-
+        BindWakeupServerServiceHelp.bindService(this);
     }
 
     @Override
