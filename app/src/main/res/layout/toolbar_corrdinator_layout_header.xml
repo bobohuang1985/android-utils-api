@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:tag="layout/toolbar_feature_family_header_0">
+
+    <ImageView
+        android:id="@+id/detail_feature_family_header_image"
+        android:layout_width="fill_parent"
+        android:layout_height="240.0dip"
+        android:adjustViewBounds="true"
+        android:foreground="@drawable/corrdinator_activity_header_gradient"
+        android:outlineProvider="bounds"
+        android:scaleType="fitCenter"
+        android:tag="binding_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/detail_feature_family_main_header"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32.0dip"
+        android:layout_marginStart="32.0dip"
+        android:layout_marginTop="120.0dip"
+        android:tag="binding_2"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/detail_feature_family_secondary"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32.0dip"
+        android:layout_marginStart="32.0dip"
+        android:layout_marginTop="16.0dip"
+        android:tag="binding_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_feature_family_main_header" />
+</android.support.constraint.ConstraintLayout>

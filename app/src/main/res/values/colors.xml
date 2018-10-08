@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="custom_app_widget_line_color">#c0ffbd21</color>
-
+    <color name="colorPrimary">#ff4ac0e0</color>
+    <color name="colorPrimaryDark">#ff3e8ddd</color>
+    <color name="primary">#ff00a09b</color>
+    <color name="primary_dark">#ff007069</color>
+    <color name="header_gradient_color">#66000000</color>
 </resources>

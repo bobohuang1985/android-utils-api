@@ -11,8 +11,8 @@
     <uses-permission android:name="android.permission.BATTERY_STATS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:name=".MyApp"
@@ -402,7 +402,8 @@
         <service
             android:name=".App.call.AudioRecorderService"
             android:enabled="true"
-            android:exported="false"></service>
+            android:exported="false" />
+
         <activity
             android:name=".App.ToastActivity"
             android:label="ToastActivity">
@@ -467,6 +468,19 @@
             <meta-data
                 android:name="path"
                 android:value="App/SystemOverlay/SystemOverlayActivity" />
+        </activity>
+        <activity
+            android:name=".CoordinatorLayoutDemoActivity"
+            android:label="@string/title_activity_coordinator_layout_demo"
+            android:theme="@style/CoordinatorMaterialTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+            <meta-data
+                android:name="path"
+                android:value="App/Layout/CoordinatorLayoutDemoActivity" />
         </activity>
     </application>
 
