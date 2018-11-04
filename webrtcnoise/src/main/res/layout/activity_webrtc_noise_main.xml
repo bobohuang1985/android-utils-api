@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="15dp"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnRecord"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="开始边录边放" >
+    </Button>
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="停止" >
+    </Button>
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="程序音量调节" >
+    </TextView>
+
+    <SeekBar
+        android:id="@+id/skbVolume"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </SeekBar>
+
+    <CheckBox
+        android:id="@+id/cb_ap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:checked="true"
+        android:text="回音噪音处理" />
+
+</LinearLayout>
