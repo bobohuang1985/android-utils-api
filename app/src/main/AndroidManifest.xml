@@ -493,7 +493,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".App.audio.AudioRecordActivity"
+        <activity
+            android:name=".App.audio.AudioRecordActivity"
             android:label="AudioRecordActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -505,6 +506,15 @@
                 android:name="path"
                 android:value="App/Audio/AudioRecordActivity" />
         </activity>
+
+        <service
+            android:name=".App.overlay.OverlayViewService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="utils.bobo.com.boboutils.BIND_OVERLAY_VIEW_SERVICE" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

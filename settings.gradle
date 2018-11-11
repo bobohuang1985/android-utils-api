@@ -1,1 +1,1 @@
-include ':app', ':CommonUtils', ':simplewebserver', ':DroidPlugin'
+include ':app', ':CommonUtils', ':simplewebserver', ':DroidPlugin', ':webrtcnoise'

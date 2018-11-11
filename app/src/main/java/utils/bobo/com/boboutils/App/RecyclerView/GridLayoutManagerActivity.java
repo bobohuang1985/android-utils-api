@@ -18,7 +18,7 @@ public class GridLayoutManagerActivity extends Activity {
     protected CustomAdapter mAdapter;
     protected GridLayoutManager mLayoutManager;
     protected String[] mDataset;
-    private static final int DATASET_COUNT = 60;
+    private static final int DATASET_COUNT = 200;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
