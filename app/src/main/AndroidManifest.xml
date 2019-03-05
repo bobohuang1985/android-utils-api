@@ -534,7 +534,20 @@
                 android:name="path"
                 android:value="App/Audio/AudioRecordActivity" />
         </activity>
+        <activity
+            android:name=".App.CustomStatusBarImgBackgroundActivity"
+            android:label="CustomStatusBarImgBackgroundActivity"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentStatus">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/CustomStatusBarImgBackgroundActivity" />
+        </activity>
         <service
             android:name=".App.overlay.OverlayViewService"
             android:enabled="true"
