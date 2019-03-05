@@ -13,6 +13,9 @@
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
 
     <application
         android:name=".MyApp"
@@ -83,7 +86,19 @@
                 android:name="path"
                 android:value="DeviceInfos/Cpu Info" />
         </activity>
+        <activity
+            android:name=".deviceinfo.ScreenInfoActivity"
+            android:label="ScreenInfoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="DeviceInfos/ScreenInfoActivity" />
+        </activity>
         <service
             android:name=".jobscheduler.TestJobService"
             android:exported="true"
@@ -482,6 +497,19 @@
             <meta-data
                 android:name="path"
                 android:value="App/Layout/CoordinatorLayoutDemoActivity" />
+        </activity>
+        <activity
+            android:name=".App.customview.CustomAccessibilityActivity"
+            android:label="CustomAccessibilityActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/CustomView/CustomAccessibilityActivity" />
         </activity>
 
         <service
