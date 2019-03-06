@@ -548,6 +548,19 @@
                 android:name="path"
                 android:value="App/CustomStatusBarImgBackgroundActivity" />
         </activity>
+        <activity
+            android:name=".App.VibratorActivity"
+            android:label="VibratorActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/VibratorActivity" />
+        </activity>
         <service
             android:name=".App.overlay.OverlayViewService"
             android:enabled="true"
