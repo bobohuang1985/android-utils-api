@@ -17,7 +17,7 @@ android {
 
         ndk {
             //限定32位本地库
-            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+            abiFilters "armeabi-v7a"
         }
     }
     buildTypes {

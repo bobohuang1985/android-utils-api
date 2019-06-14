@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/DroidPlugin" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/simplewebserver" />
+            <option value="$PROJECT_DIR$/webrtcnoise" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
