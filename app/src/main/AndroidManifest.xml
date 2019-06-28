@@ -561,6 +561,19 @@
                 android:name="path"
                 android:value="App/VibratorActivity" />
         </activity>
+        <activity
+            android:name=".App.TempActivity"
+            android:label="TempActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/TempActivity" />
+        </activity>
         <service
             android:name=".App.overlay.OverlayViewService"
             android:enabled="true"
@@ -569,6 +582,35 @@
                 <action android:name="utils.bobo.com.boboutils.BIND_OVERLAY_VIEW_SERVICE" />
             </intent-filter>
         </service>
+        <service
+            android:name=".accessibility.AccessibilityListenerService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/accessibility_listener_service" />
+        </service>
+        <service android:name=".service.MyTileService"
+            android:label="@string/app_name"
+            android:icon="@drawable/ic_feedback"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".accessibility.AccessibilityServiceActivity"
+            android:label="AccessibilityServiceActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="Accessibility/AccessibilityServiceActivity" />
+        </activity>
     </application>
 
 </manifest>
