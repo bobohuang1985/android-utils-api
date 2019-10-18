@@ -27,6 +27,14 @@ public class ScreenInfoActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_info);
+        View view = findViewById(R.id.infoll);
+
+        TextView infoTextView = (TextView)findViewById(R.id.info);
+        String infoText = "1dp = " + this.getResources().getDimension(R.dimen.dp_1);
+        infoText += "; paddingEnd = " + infoTextView.getPaddingEnd() + "; paddingStart = " + infoTextView.getPaddingStart();
+
+        infoText += "\r\n; parent paddingEnd = " + view.getPaddingEnd() + "; paddingStart = " + view.getPaddingStart();
+        infoTextView.setText(infoText);
     }
     @Override
     public void onDestroy() {
