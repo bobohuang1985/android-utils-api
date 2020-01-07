@@ -16,6 +16,8 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+
 
     <application
         android:name=".MyApp"
@@ -415,10 +417,27 @@
         </activity>
 
         <service
+            android:name=".App.call.AudioRecorder8Dot0Service"
+            android:enabled="true"
+            android:exported="false" />
+        <activity
+            android:name=".App.call.CallAudioRecord8Dot0Activity"
+            android:label="CallAudioRecord8Dot0Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/Call/CallAudioRecord8Dot0Activity" />
+        </activity>
+
+        <service
             android:name=".App.call.AudioRecorderService"
             android:enabled="true"
             android:exported="false" />
-
         <activity
             android:name=".App.ToastActivity"
             android:label="ToastActivity">
@@ -510,6 +529,20 @@
             <meta-data
                 android:name="path"
                 android:value="App/CustomView/CustomAccessibilityActivity" />
+        </activity>
+
+        <activity
+            android:name=".App.customview.CanvasLearnActivity"
+            android:label="CanvasLearnActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/CustomView/CanvasLearnActivity" />
         </activity>
 
         <service
