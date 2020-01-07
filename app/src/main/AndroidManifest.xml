@@ -193,6 +193,19 @@
                 android:value="App/Notification/NotificationActivity" />
         </activity>
         <activity
+            android:name=".App.NotificationWithChannelActivity"
+            android:label="NotificationWithChannelActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="bobo.intent.category.DEMO_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="path"
+                android:value="App/Notification/NotificationWithChannelActivity" />
+        </activity>
+        <activity
             android:name=".MultiApp.MainActivity"
             android:label="@string/multi_app">
             <intent-filter>
