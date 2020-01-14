@@ -116,6 +116,7 @@ public class NotificationWithChannelActivity extends Activity implements View.On
         //direct reply
         RemoteInput remoteInput = new RemoteInput.Builder(KEY_TEXT_REPLY)
                 .setLabel("direct reply")
+                .setChoices(new CharSequence[] {"Reply 1", "Reply 2"})
                 .build();
         Intent replyIntent = new Intent();
         replyIntent.setAction(ACTION_REPLY);
@@ -129,6 +130,7 @@ public class NotificationWithChannelActivity extends Activity implements View.On
                 new Notification.Action.Builder(R.drawable.ic_launcher,
                         "DirectReply", replyPendingIntent)
                         .addRemoteInput(remoteInput)
+                        .setAllowGeneratedReplies(true)
                         .build();
         builder.addAction(action);
         notificationManager.notify(1,builder.build());
