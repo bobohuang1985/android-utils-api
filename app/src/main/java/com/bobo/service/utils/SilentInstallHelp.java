@@ -3,6 +3,7 @@ package com.bobo.service.utils;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -63,7 +64,12 @@ public class SilentInstallHelp {
             final File sourceFile = new File(app_path);
             //String cmd = "pm install -r " + app_path;
             //Process p = Runtime.getRuntime().exec(cmd);
-            Process p = Runtime.getRuntime().exec(new String[]{"pm", "install", "-r", app_path});
+            Process p;
+            if (Build.VERSION.SDK_INT >= 24) {
+                p = Runtime.getRuntime().exec(new String[]{"pm", "install", "-r", "-i", "com.android.packageinstaller", app_path});
+            } else {
+                p = Runtime.getRuntime().exec(new String[]{"pm", "install", "-r", app_path});
+            }
             //Process p =  Runtime.getRuntime().exec("pm", new String[]{"-r",app_path});
             InputStream is = p.getInputStream();
             InputStream isErr = p.getErrorStream();
